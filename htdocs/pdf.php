@@ -17,6 +17,7 @@
 
     $header = array("Semester No.", "Name", "Year", "GPA");
 
+    // Create PDF
     $pdf = new FPDF();
     $pdf->SetFont('Arial','',14);
     $pdf->AddPage();
