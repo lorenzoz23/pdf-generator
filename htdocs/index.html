@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>PDF Generator</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+<script>
+    function generate() {
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function() {
+            if(this.status == 200 && this.readyState == 4) {
+                alert("Your PDF has been generated!");
+                return;
+            }
+        }
+        xmlhttp.open("GET", "pdf.php", true);
+        xmlhttp.send();
+    }
+</script>
+</head>
+<body>
+
+<div style="text-align:center">
+    <h1>PDF Generator</h1>
+</div>
+<div class="center">
+    <button 
+        type="submit" 
+        name="pdf-generate" 
+        onclick="generate()" 
+        style="display: block; margin: 0 auto;"
+    >
+    generate
+    </button>
+</div>
+
+</body>
+</html>
